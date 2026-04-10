@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#e94560">
+    <meta name="description" content="DevStore — Toko online karya digital siswa">
+    <link rel="manifest" href="manifest.json">
+    <link rel="icon" href="icons/icon-192.png">
+    <link rel="apple-touch-icon" href="icons/icon-192.png">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>DevStore — Toko Karya Digital</title>
+</head>
+
+<body>
+    <!-- ======== HEADER TOKO ======== -->
+    <header class="header">
+        <h1>🛒 DevStore</h1>
+        <p>Karya Digital Buatan Siswa — Dibuat dengan ❤️</p>
+    </header>
+
+    <!-- ======== DAFTAR PRODUK ======== -->
+    <!-- Setiap <article> = 1 kartu produk di toko -->
+    <main class="product-grid">
+        <article class="card">
+            <span class="card-icon">🎮</span>
+            <h3>Game Petualangan</h3>
+            <p class="card-desc">Game platformer 2D seru dengan 5 level</p>
+            <p class="card-price">Rp 50.000</p>
+            <button onclick="handleBeli('Game Petualangan')">🛍️ Beli</button>
+        </article>
+        <article class="card">
+            <span class="card-icon">🌐</span>
+            <h3>Website Portfolio</h3>
+            <p class="card-desc">Template portfolio modern untuk showcase</p>
+            <p class="card-price">Rp 75.000</p>
+            <button onclick="handleBeli('Website Portfolio')">🛍️ Beli</button>
+        </article>
+        <article class="card">
+            <span class="card-icon">🎨</span>
+            <h3>Desain UI Kit</h3>
+            <p class="card-desc">Komponen desain siap pakai untuk project</p>
+            <p class="card-price">Rp 30.000</p>
+            <button onclick="handleBeli('Desain UI Kit')">🛍️ Beli</button>
+        </article>
+        <article class="card">
+            <span class="card-icon">🤖</span>
+            <h3>Chatbot AI</h3>
+            <p class="card-desc">Bot pintar untuk menjawab soal pelajaran</p>
+            <p class="card-price">Rp 100.000</p>
+            <button onclick="handleBeli('Chatbot AI')">🛍️ Beli</button>
+        </article>
+    </main>
+
+    <!-- Tombol install PWA — muncul otomatis saat PWA siap -->
+    <button id="btn-install" class="install-btn" hidden>📲 Install App</button>
+    <footer class="footer">
+        <p>© 2026 DevStore — Project PWA Kelas Coding</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,171 @@
+/* DevStore | style.css — Styling & Responsive */
+
+/* === VARIABEL & RESET === */
+:root {
+    --bg: #0f0f23;
+    --card: #1a1a3e;
+    --accent: #e94560;
+    --accent2: #7c3aed;
+    --text: #f8f8f2;
+    --muted: #a0a0b8;
+    --price: #10b981;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    min-height: 100vh;
+}
+
+/* === HEADER === */
+.header {
+    text-align: center;
+    padding: 2rem 1rem 1rem;
+    background: var(--card);
+}
+
+.header h1 {
+    font-size: 2rem;
+    color: var(--accent);
+}
+
+.header p {
+    color: var(--muted);
+    margin-top: 0.4rem;
+    font-size: 0.9rem;
+}
+
+/* === GRID PRODUK === */
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 1rem;
+    padding: 1.5rem 1rem;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+/* === KARTU PRODUK === */
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 1.4rem 1rem;
+    background: var(--card);
+    border-radius: 14px;
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 8px 25px rgba(233, 69, 96, 0.15);
+}
+
+.card-icon {
+    font-size: 2.5rem;
+    margin-bottom: 0.6rem;
+}
+
+.card h3 {
+    font-size: 1rem;
+    margin-bottom: 0.3rem;
+}
+
+.card-desc {
+    font-size: 0.8rem;
+    color: var(--muted);
+    margin-bottom: 0.6rem;
+}
+
+.card-price {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--price);
+    margin-bottom: 0.8rem;
+}
+
+/* === TOMBOL === */
+.card button,
+.install-btn {
+    border: none;
+    cursor: pointer;
+    background: var(--accent);
+    color: #fff;
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+}
+
+.card button {
+    width: 100%;
+    padding: 0.6rem;
+    border-radius: 8px;
+    font-size: 0.85rem;
+}
+
+.card button:hover,
+.install-btn:hover {
+    opacity: 0.85;
+}
+
+.install-btn {
+    position: fixed;
+    bottom: 1.2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 0.8rem 2rem;
+    border-radius: 50px;
+    font-size: 1rem;
+    box-shadow: 0 4px 20px rgba(233, 69, 96, 0.4);
+    z-index: 100;
+    animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+
+    0%,
+    100% {
+        transform: translateX(-50%) translateY(0);
+    }
+
+    50% {
+        transform: translateX(-50%) translateY(-8px);
+    }
+}
+
+/* === FOOTER === */
+.footer {
+    text-align: center;
+    padding: 1.5rem;
+    color: var(--muted);
+    font-size: 0.8rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+/* === RESPONSIVE DESKTOP === */
+@media (min-width: 768px) {
+    .product-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1.5rem;
+    }
+
+    .header h1 {
+        font-size: 2.5rem;
+    }
+
+    .card {
+        padding: 1.8rem 1.2rem;
+    }
+
+    .card-icon {
+        font-size: 3rem;
+    }
+}
