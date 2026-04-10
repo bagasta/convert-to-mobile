@@ -124,15 +124,28 @@ File ini memberitahu browser bahwa website kita adalah aplikasi:
 
 ```json
 {
+  "id": "/",
   "name": "DevStore — Toko Karya Digital Siswa",
   "short_name": "DevStore",
   "start_url": "./index.html",
   "display": "standalone",
   "background_color": "#0f0f23",
   "theme_color": "#e94560",
+  "lang": "id",
+  "dir": "ltr",
+  "categories": ["shopping", "education"],
   "icons": [
-    { "src": "icons/icon-192.png", "sizes": "192x192", "type": "image/png" },
-    { "src": "icons/icon-512.png", "sizes": "512x512", "type": "image/png" }
+    { "src": "icons/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "icons/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "icons/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ],
+  "screenshots": [
+    {
+      "src": "icons/screenshot-mobile.png",
+      "sizes": "412x915",
+      "type": "image/png",
+      "form_factor": "narrow"
+    }
   ]
 }
 ```
@@ -140,7 +153,9 @@ File ini memberitahu browser bahwa website kita adalah aplikasi:
 **Penjelasan:**
 - `display: "standalone"` = tampil tanpa address bar (seperti app native)
 - `theme_color` = warna bar atas di HP
-- `icons` = gambar untuk home screen & splash screen
+- `id` & `categories` = syarat wajib agar app bisa masuk Play Store
+- `screenshots` = gambar preview aplikasi saat orang akan menginstall
+- `icons` (`any` & `maskable`) = icon untuk home screen & splash screen yang bisa menyesuaikan bentuk layar HP.
 
 #### Langkah 2: Hubungkan Manifest ke HTML
 Tambahkan di `<head>` pada `index.html`:
