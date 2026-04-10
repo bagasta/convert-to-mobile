@@ -4,6 +4,7 @@
     "short_name": "DevStore",
     "description": "Toko online untuk menjual karya digital buatan siswa",
     "start_url": "./index.html",
+    "scope": "./",
     "display": "standalone",
     "background_color": "#0f0f23",
     "theme_color": "#e94560",
@@ -14,27 +15,47 @@
         "shopping",
         "education"
     ],
+    "prefer_related_applications": false,
     "icons": [
         {
             "src": "icons/icon-192.png",
             "sizes": "192x192",
             "type": "image/png",
-            "purpose": "any maskable"
+            "purpose": "any"
         },
         {
             "src": "icons/icon-512.png",
             "sizes": "512x512",
             "type": "image/png",
-            "purpose": "any maskable"
-        }
-    ],
-    "screenshots": [
+            "purpose": "any"
+        },
+        {
+            "src": "icons/icon-192.png",
+            "sizes": "192x192",
+            "type": "image/png",
+            "purpose": "maskable"
+        },
         {
             "src": "icons/icon-512.png",
             "sizes": "512x512",
             "type": "image/png",
+            "purpose": "maskable"
+        }
+    ],
+    "screenshots": [
+        {
+            "src": "icons/screenshot-mobile.png",
+            "sizes": "412x915",
+            "type": "image/png",
             "form_factor": "narrow",
-            "label": "DevStore — Toko Karya Digital"
+            "label": "DevStore — Tampilan Mobile"
+        },
+        {
+            "src": "icons/screenshot-desktop.png",
+            "sizes": "1920x1080",
+            "type": "image/png",
+            "form_factor": "wide",
+            "label": "DevStore — Tampilan Desktop"
         }
     ]
 }

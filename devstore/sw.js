@@ -2,10 +2,11 @@
    DevStore — Service Worker (sw.js)
    Fungsi: Menyimpan file ke cache agar bisa offline
    ============================================ */
-const CACHE_NAME = 'devstore-v1';
+const CACHE_NAME = 'devstore-v2';
 // Daftar semua file yang perlu disimpan ke cache
 const FILES = ['./', './index.html', './style.css', './script.js',
-    './manifest.json', './icons/icon-192.png', './icons/icon-512.png'];
+    './manifest.json', './icons/icon-192.png', './icons/icon-512.png',
+    './icons/screenshot-mobile.png', './icons/screenshot-desktop.png'];
 
 // INSTALL — simpan semua file ke cache saat pertama kali
 self.addEventListener('install', (e) => {
